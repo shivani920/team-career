@@ -1,0 +1,25 @@
+<!-- views/add-result.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Result</title>
+    </head>
+    <body>
+        <h1>Add Result</h1>
+        <form action="/results/add" method="POST">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+            <br>
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+            <br>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+            <br>
+            <button type="submit">Add Result</button>
+        </form>
+        <p><a href="/results">Back to Result List</a></p>
+    </body>
+</html>

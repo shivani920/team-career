@@ -1,0 +1,19 @@
+<!-- views/interviews.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interview List</title>
+    </head>
+    <body>
+        <h1>Interview List</h1>
+        <ul>
+            <% interviews.forEach(interview => { %>
+            <li><a href="/interviews/<%= interview._id %>"><%= interview.company
+                    %></a></li>
+            <% }); %>
+        </ul>
+        <p><a href="/interviews/add">Add New Interview</a></p>
+    </body>
+</html>

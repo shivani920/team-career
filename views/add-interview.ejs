@@ -1,0 +1,29 @@
+<!-- views/add-interview.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Interview</title>
+    </head>
+    <body>
+        <h1>Add Interview</h1>
+        <form action="/interviews/add" method="POST">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+            <br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="students">Select Students:</label>
+            <select id="students" name="students" multiple>
+                <% students.forEach(student => { %>
+                <option value="<%= student._id %>"><%= student.name %></option>
+                <% }); %>
+            </select>
+            <br>
+            <button type="submit">Add Interview</button>
+        </form>
+        <p><a href="/interviews">Back to Interview List</a></p>
+    </body>
+</html>

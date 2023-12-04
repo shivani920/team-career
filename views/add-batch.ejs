@@ -1,0 +1,18 @@
+<!-- views/add-batch.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Batch</title>
+    </head>
+    <body>
+        <h1>Add Batch</h1>
+        <form action="/batches/add" method="POST">
+            <label for="name">Batch Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <button type="submit">Add Batch</button>
+        </form>
+    </body>
+</html>

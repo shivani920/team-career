@@ -1,0 +1,23 @@
+<!-- views/interview-details.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interview Details</title>
+    </head>
+    <body>
+        <h1>Interview Details</h1>
+        <p>Company: <%= interview.company %></p>
+        <p>Date: <%= interview.date %></p>
+        <p>Students:</p>
+        <ul>
+            <% interview.students.forEach(student => { %>
+            <li><%= student.name %></li>
+            <% }); %>
+        </ul>
+        <!-- Display other interview details -->
+        <!-- ... -->
+        <p><a href="/interviews">Back to Interview List</a></p>
+    </body>
+</html>

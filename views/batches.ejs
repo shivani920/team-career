@@ -1,0 +1,18 @@
+<!-- views/batches.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Batch List</title>
+    </head>
+    <body>
+        <h1>Batch List</h1>
+        <ul>
+            <% batches.forEach(batch => { %>
+            <li><a href="/batches/<%= batch._id %>"><%= batch.name %></a></li>
+            <% }); %>
+        </ul>
+        <p><a href="/batches/add">Add New Batch</a></p>
+    </body>
+</html>

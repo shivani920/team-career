@@ -1,0 +1,21 @@
+<!-- views/student-details.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Details</title>
+    </head>
+    <body>
+        <h1>Student Details</h1>
+        <p>Name: <%= student.name %></p>
+        <p>College: <%= student.college %></p>
+        <p>Status: <%= student.status %></p>
+        <p>DSA Score: <%= student.dsaScore %></p>
+        <p>WebD Score: <%= student.webDScore %></p>
+        <p>React Score: <%= student.reactScore %></p>
+        <!-- Display other student details -->
+        <!-- ... -->
+        <p><a href="/students">Back to Student List</a></p>
+    </body>
+</html>
